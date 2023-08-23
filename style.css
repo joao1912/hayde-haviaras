@@ -1,0 +1,162 @@
+@font-face {
+    font-family: "Pacifico";
+    src: url(./assets/fonts/Pacifico-Regular.ttf);
+}
+@font-face {
+    font-family: "Nunito";
+    src: url(./assets/fonts/Nunito-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #E4DCD1;
+    overflow-y: hidden;
+}
+
+header {
+    background-color: #F0A49F;
+    width: 100%;
+    height: 15%;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+#containerLogo {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%);
+}
+
+#containerLogo div {
+    position: relative;
+    background-color: #F0A49F;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+#containerLogo img {
+    width: 92%;
+    height: 92%;
+} 
+
+#titleVisita {
+    width: 100%;
+    height: 5%;
+    text-align: center;
+    font-size: 1.3em;
+    font-family: "Pacifico",Arial, Helvetica, sans-serif;
+}
+
+#containerContato {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 58%;
+    padding: 0 10px;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+#containerContato div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.iconBox {
+    width: 40px;
+    height: 40px;
+    display: block;
+    position: relative;
+}
+
+.iconBox img {
+    width: 100%;
+    height: 100%;
+    min-width: 40px;
+    min-height: 40px;
+}
+
+.textContat {
+    font-family: "Nunito",Arial, Helvetica, sans-serif;
+}
+
+@keyframes vibrate {
+    0% {
+        transform: rotate(0);
+    }
+    10% {
+        transform: rotate(5deg);
+    }
+    20% {
+        transform: rotate(10deg);
+    }
+    30% {
+        transform: rotate(5deg);
+    }
+    40% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    60% {
+        transform: rotate(-10deg);
+    }
+    70% {
+        transform: rotate(-5deg);
+    }
+    80% {
+        transform: rotate(5deg);
+    }
+    90% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+   
+    
+}
+
+.vibrate {
+    animation: vibrate 0.5s ease-in-out;
+}
+
+footer {
+    width: 100%;
+    height: 30px;
+    background-color: #F0A49F;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+
+small {
+    width: 100%;
+    text-align: center;
+    font-size: 0.6em;
+    display: block;
+}
