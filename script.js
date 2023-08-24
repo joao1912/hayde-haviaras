@@ -18,3 +18,23 @@ function vibrate() {
         vibrate()
     }, 2000)
 }
+
+function copyEmail() {
+    
+    const email = "joaoteixeira1q2w3e@gmail.com";
+    // navigator.clipboard.writeText(email)
+    // .then(function() {
+    //   alert("Endereço de e-mail copiado: " + email);
+    // })
+    // .catch(function(err) {
+    //     alert("erro")
+    // });
+    var tempInput = document.createElement("input");
+    tempInput.setAttribute('value', email);
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    tempInput.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+    alert("copiado(esse alerta vai ser Substituído)")
+  }
