@@ -29,5 +29,13 @@ function copyEmail() {
     tempInput.setSelectionRange(0, 99999);
     document.execCommand("copy");
     document.body.removeChild(tempInput);
-    alert("copiado(esse alerta vai ser Substituído)")
-  }
+}
+
+const emailIcon = document.getElementById("email")
+emailIcon.addEventListener("click", function() {
+    const positionAnimation = document.getElementById("local")
+    positionAnimation.classList.add("copyAnimation")
+    setTimeout(() => {
+        positionAnimation.classList.remove("copyAnimation")
+    }, 2000)
+})
