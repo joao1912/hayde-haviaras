@@ -1,11 +1,12 @@
 const icons = document.querySelectorAll(".icon")
+const pinLoc = document.getElementById("iconPinLocal")
 let iconsVibrate = 0
 
 vibrate()
 function vibrate() {
 
     icons[iconsVibrate].classList.add("vibrate")
-
+    pinLoc.classList.toggle("vibrate")
     setTimeout(() => {
 
         icons[iconsVibrate].classList.remove("vibrate")
@@ -14,9 +15,14 @@ function vibrate() {
         } else {
             iconsVibrate++
         }
-
+       
         vibrate()
     }, 2000)
+    
+    setTimeout(() => {
+         pinLoc.classList.remove("vibrate")
+        
+    }, 1000)
 }
 
 function copyEmail() {
@@ -39,3 +45,18 @@ emailIcon.addEventListener("click", function() {
         positionAnimation.classList.remove("copyAnimation")
     }, 2000)
 })
+
+const containerEndereco = document.getElementById("containerEndereco")
+const botaoEndereco = document.getElementById("endereco")
+const btnClose = document.getElementById("btnClose")
+botaoEndereco.addEventListener("click", () => {
+    containerEndereco.style.display = "flex"
+    btnClose.addEventListener("click", closeContainerLoc)
+})
+
+function closeContainerLoc() {
+   
+    containerEndereco.style.display = "none"
+    btnClose.removeEventListener("click", closeContainerLoc)
+    
+}
