@@ -310,6 +310,10 @@ small a {
         width: 140px;
         height: 140px;
     }
+
+    #containerEndereco {
+        width: 70%;
+    }
 }
 
 @media (min-width: 800px){
@@ -342,6 +346,7 @@ small a {
     #containerContato {
         width: 320px;
         height: 45%;
+        margin-top: 0;
     } 
     
     #containerContato div {
@@ -374,5 +379,23 @@ small a {
     i:hover {
         cursor: pointer;
     }
+
+    #containerEndereco {
+        width: 50%;
+        height: 65%;
+    }
+
+    #containerEndereco h2 { 
+        font-size: 2em;
+    }
+
+    #containerEndereco span { 
+        font-size: 1.3em;
+    }
+
+    #containerEndereco a { 
+        font-size: 1em;
+    }
+
 
 }
