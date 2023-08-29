@@ -60,3 +60,19 @@ function closeContainerLoc() {
     btnClose.removeEventListener("click", closeContainerLoc)
     
 }
+
+const shareData = {
+    title: "Haydê Haviaras",
+    text: "Cartão de Visita",
+    url: "https://haydehaviaras.com.br",
+  };
+  
+const btn = document.querySelector("#btnShare");
+btn.addEventListener("click", async () => {
+try {
+    await navigator.share(shareData);
+    
+} catch (err) {
+    console.log(`Error: ${err}`)
+}
+});
