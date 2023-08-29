@@ -212,6 +212,23 @@ small a {
     transform: translate(-50%, 0);
 }
 
+.copySiteAnimation::after {
+    content: "Link Copiado";
+    text-align: center;
+    width: 30px; 
+    font-family: "Nunito" ,Arial, Helvetica, sans-serif;
+    background-color: #F0A49F;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    border-radius: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: alongar 1.4s ease-in-out both;
+    transform: translate(-50%, 0);
+}
+
+
 #containerEndereco {
     display: none;
     flex-direction: column;

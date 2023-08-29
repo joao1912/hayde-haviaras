@@ -71,8 +71,19 @@ const btn = document.querySelector("#btnShare");
 btn.addEventListener("click", async () => {
 try {
     await navigator.share(shareData);
-    
 } catch (err) {
-    console.log(`Error: ${err}`)
+    const site = "https://haydehaviaras.com.br";
+    var tempInput = document.createElement("input");
+    tempInput.setAttribute('value', site);
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    tempInput.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+    const positionAnimation = document.getElementById("local")
+    positionAnimation.classList.add("copySiteAnimation")
+    setTimeout(() => {
+        positionAnimation.classList.remove("copySiteAnimation")
+    }, 2000)
 }
 });
