@@ -318,6 +318,11 @@ small a {
     padding-right: 3px;
 }
 
+#btnShare:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
 @media (min-width: 430px) and (max-width: 800px) {
 
     body {
