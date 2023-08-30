@@ -67,7 +67,7 @@ btn.addEventListener("click", () => {
     try {
         navigator.share({
             title: "Haydê Haviaras",
-            text: "Cartão de Visita",
+            text: "Cartão de Visita: ",
             url: "https://haydehaviaras.com.br"
         });
         
