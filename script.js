@@ -1,11 +1,12 @@
 const icons = document.querySelectorAll(".icon")
+const pinLoc = document.getElementById("iconPinLocal")
 let iconsVibrate = 0
 
 vibrate()
 function vibrate() {
 
     icons[iconsVibrate].classList.add("vibrate")
-
+    pinLoc.classList.toggle("vibrate")
     setTimeout(() => {
 
         icons[iconsVibrate].classList.remove("vibrate")
@@ -14,9 +15,14 @@ function vibrate() {
         } else {
             iconsVibrate++
         }
-
+       
         vibrate()
     }, 2000)
+    
+    setTimeout(() => {
+         pinLoc.classList.remove("vibrate")
+        
+    }, 1000)
 }
 
 function copyEmail() {
@@ -39,3 +45,47 @@ emailIcon.addEventListener("click", function() {
         positionAnimation.classList.remove("copyAnimation")
     }, 2000)
 })
+
+const containerEndereco = document.getElementById("containerEndereco")
+const botaoEndereco = document.getElementById("endereco")
+const btnClose = document.getElementById("btnClose")
+botaoEndereco.addEventListener("click", () => {
+    containerEndereco.style.display = "flex"
+    btnClose.addEventListener("click", closeContainerLoc)
+})
+
+function closeContainerLoc() {
+   
+    containerEndereco.style.display = "none"
+    btnClose.removeEventListener("click", closeContainerLoc)
+    
+}
+  
+const btn = document.querySelector("#btnShare");
+btn.addEventListener("click", () => {
+   
+    try {
+        navigator.share({
+            title: "Haydê Haviaras",
+            text: "Cartão de Visita",
+            url: "https://haydehaviaras.com.br"
+        });
+        
+    } catch(err) {
+       
+        const site = `Cartão de Visita Hayde Haviaras: https://haydehaviaras.com.br`;
+        var tempInput = document.createElement("input");
+        tempInput.setAttribute('value', site);
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        tempInput.setSelectionRange(0, 99999);
+        document.execCommand("copy");
+        document.body.removeChild(tempInput);
+        const positionAnimation = document.getElementById("local")
+        positionAnimation.classList.add("copySiteAnimation")
+        setTimeout(() => {
+            positionAnimation.classList.remove("copySiteAnimation")
+        }, 2000)
+    }
+
+});

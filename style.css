@@ -212,6 +212,117 @@ small a {
     transform: translate(-50%, 0);
 }
 
+.copySiteAnimation::after {
+    content: "Link Copiado";
+    text-align: center;
+    width: 30px; 
+    font-family: "Nunito" ,Arial, Helvetica, sans-serif;
+    background-color: #F0A49F;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    border-radius: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: alongar 1.4s ease-in-out both;
+    transform: translate(-50%, 0);
+}
+
+
+#containerEndereco {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    width: 85%;
+    height: 48%;
+    background-color: #F0A49F;
+    top: 50%;
+    left: 50%;
+    border-radius: 20px;
+    font-family: "Nunito",Arial, Helvetica, sans-serif;
+    transform: translate(-50%, -50%);
+}
+
+#containerEndereco span {
+    font-size: 1.2em;
+}
+
+#containerEndereco h2 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#containerEndereco div {
+    display: flex;
+    flex-direction: column;
+}
+
+#containerEndereco a {
+    color: black;
+}
+
+#btnToMaps {
+    width: 30%;
+    padding: 5px;
+    border-radius: 8px;
+    border: 0;
+}
+
+#iconPinLocal {
+    position: absolute;
+}
+
+#linkLoc {
+    margin-top: 10px;
+}
+
+#containerBtnExit {
+    position: absolute;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: start;
+}
+
+#btnClose {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    border: 0;
+    background-color: transparent;
+    color: #E4DCD1;
+}
+#btnClose i {
+    font-size: 3em;
+}
+
+#btnShare {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #E4DCD1;
+    color: #F0A49F;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding-right: 3px;
+}
+
+#btnShare:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
 @media (min-width: 430px) and (max-width: 800px) {
 
     body {
@@ -236,6 +347,10 @@ small a {
     #containerLogo div {
         width: 140px;
         height: 140px;
+    }
+
+    #containerEndereco {
+        width: 70%;
     }
 }
 
@@ -269,6 +384,7 @@ small a {
     #containerContato {
         width: 320px;
         height: 45%;
+        margin-top: 0;
     } 
     
     #containerContato div {
@@ -301,5 +417,23 @@ small a {
     i:hover {
         cursor: pointer;
     }
+
+    #containerEndereco {
+        width: 50%;
+        height: 65%;
+    }
+
+    #containerEndereco h2 { 
+        font-size: 2em;
+    }
+
+    #containerEndereco span { 
+        font-size: 1.3em;
+    }
+
+    #containerEndereco a { 
+        font-size: 1em;
+    }
+
 
 }
